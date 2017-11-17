@@ -14,13 +14,15 @@ std::vector<int> Solution::twoSum(std::vector<int> & nums, int target){
 	auto p = nums.begin();
 	auto end = nums.end();
 	
+	result.clear(); 
+	
 	for(; p != end; p++){
-		tmp = target - *p;
-		if(viMap.find(tmp) != viMap.end()){
-			result.push_back(viMap[tmp]);
-			result.push_back(nums.begin() - p);
+		if(viMap.find(*p) != viMap.end()){
+			result.push_back(viMap[*p]);
+			result.push_back(p - nums.begin());
 			return  result;
 		}
+		tmp = target - *p;
 		viMap[tmp] = nums.begin() - p;
 	}
 	

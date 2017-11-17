@@ -9,8 +9,9 @@ int main(void){
 	vector<int> arr = {2, 3, 4};
 	vector<int> result = s3.twoSum(arr, 6);
 	
-	cout << result.size() << " ";
-	for(int i: result){
-		cout << i << " ";
-	}
+	assert(result.size() == 2);
+	assert(result[0] == 0);
+	assert(result[1] == 2);
+	
+	cout << "²âÊÔÍ¨¹ý" << endl;
 }
