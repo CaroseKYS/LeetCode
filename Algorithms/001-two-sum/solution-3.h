@@ -23,7 +23,7 @@ std::vector<int> Solution::twoSum(std::vector<int> & nums, int target){
 			return  result;
 		}
 		tmp = target - *p;
-		viMap[tmp] = nums.begin() - p;
+		viMap[tmp] = p - nums.begin();
 	}
 	
 	return result;
